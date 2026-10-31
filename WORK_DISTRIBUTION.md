@@ -5,14 +5,14 @@
 
 ---
 
-## 1. Team Hierarchy & Roles
+## 1. Team Hierarchy, Contact Details & Roles
 
-| Member Name | GitHub Username | Role & Specialization | Dedicated Branch |
-| :--- | :--- | :--- | :--- |
-| **Rupam** *(Lead)* | `Rupam852` | **Team Lead & Systems Architect** | `main` |
-| **Mistu Naskar** | `mamma30y` | **Database & Storage Engineer** | `member-mistu` |
-| **Anish Das** | `Anish061106` | **Backend & Geospatial Logic Engineer** | `member-anish` |
-| **Subhankari Mondal** | `subhankarim303-wq` | **Frontend & Canvas Viewport Engineer** | `member-subhankari` |
+| Member Name | Role & Specialization | GitHub Username | Email | Mobile No | Dedicated Branch |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Rupam Bairagya** *(Lead)* | **Team Lead & Systems Architect** | `Rupam852` | `rupambairagya08@gmail.com` | +91 9477098726 | `main` |
+| **Anish Das** | **Backend & Geospatial Logic Engineer** | `Anish061106` | `dasanish157@gmail.com` | +91 95647 64694 | `member-anish` |
+| **Subhankari Mondal** | **Frontend & Canvas Viewport Engineer** | `subhankarim303-wq` | `subhankarim303@gmail.com` | +91 62977 54704 | `member-subhankari` |
+| **Mistu Naskar** | **Database & Storage Engineer** | `mamma30y` | `mammamroy75@gmail.com` | +91 62910 34314 | `member-mistu` |
 
 ---
 
@@ -102,3 +102,4 @@ As mandated by Infotact Solutions:
    * Rupam ➔ `main` (Merge & Coordination)
 2. **Commit Attributions:** All commits must carry the respective member's verified Git name and email matching their GitHub account.
 3. **Commit Quality:** Every commit must contain genuine code changes, documentation updates, or test cases. Empty or single-character commits are strictly disallowed.
+

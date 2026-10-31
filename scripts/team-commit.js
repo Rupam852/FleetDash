@@ -8,33 +8,35 @@ import { execSync } from 'child_process';
  * as required by the Infotact Project Execution Handbook V2.0.
  */
 
-// Member profile configuration
-// If you know their exact GitHub emails, replace the placeholder emails below.
-// Note: Even the GitHub no-reply email format (e.g. ID+username@users.noreply.github.com) works seamlessly!
+// Official Member profile configuration with verified GitHub emails
 const MEMBERS = {
   rupam: {
-    name: 'Rupam',
+    name: 'Rupam Bairagya',
     email: 'rupambairagya08@gmail.com',
     branch: 'main',
-    githubUsername: 'Rupam852'
+    githubUsername: 'Rupam852',
+    phone: '+91 9477098726'
   },
   anish: {
     name: 'Anish Das',
-    email: 'anishdas061106@gmail.com', // Replace with Anish's GitHub email if different
+    email: 'dasanish157@gmail.com',
     branch: 'member-anish',
-    githubUsername: 'Anish061106'
+    githubUsername: 'Anish061106',
+    phone: '+91 95647 64694'
+  },
+  subhankari: {
+    name: 'Subhankari Mondal',
+    email: 'subhankarim303@gmail.com',
+    branch: 'member-subhankari',
+    githubUsername: 'subhankarim303-wq',
+    phone: '+91 62977 54704'
   },
   mistu: {
     name: 'Mistu Naskar',
-    email: 'mamma30y@users.noreply.github.com', // Replace with Mistu's GitHub email if different
+    email: 'mammamroy75@gmail.com',
     branch: 'member-mistu',
-    githubUsername: 'mamma30y'
-  },
-  subhankari: {
-    name: 'SUBHANKARI MONDAL',
-    email: 'subhankarim303-wq@users.noreply.github.com', // Replace with Subhankari's GitHub email if different
-    branch: 'member-subhankari',
-    githubUsername: 'subhankarim303-wq'
+    githubUsername: 'mamma30y',
+    phone: '+91 62910 34314'
   }
 };
 
@@ -89,3 +91,4 @@ try {
   console.error('❌ Failed to execute commit:', err instanceof Error ? err.message : err);
   process.exit(1);
 }
+
