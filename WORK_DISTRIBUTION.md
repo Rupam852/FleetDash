@@ -9,7 +9,7 @@
 
 | Member Name | Role & Specialization | GitHub Username | Email | Mobile No | Dedicated Branch |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Rupam Bairagya** *(Lead)* | **Team Lead & Systems Architect** | `Rupam852` | `rupambairagya08@gmail.com` | +91 9477098726 | `main` |
+| **Rupam Bairagya** *(Lead)* | **Team Lead & Systems Architect** | `Rupam852` | `rupambairagya08@gmail.com` | +91 9477098726 | `member-rupam` *(Main: Integration)* |
 | **Anish Das** | **Backend & Geospatial Logic Engineer** | `Anish061106` | `dasanish157@gmail.com` | +91 95647 64694 | `member-anish` |
 | **Subhankari Mondal** | **Frontend & Canvas Viewport Engineer** | `subhankarim303-wq` | `subhankarim303@gmail.com` | +91 62977 54704 | `member-subhankari` |
 | **Mistu Naskar** | **Database & Storage Engineer** | `mamma30y` | `mammamroy75@gmail.com` | +91 62910 34314 | `member-mistu` |
@@ -96,10 +96,11 @@
 
 As mandated by Infotact Solutions:
 1. **Dedicated Branches:** Each member commits strictly to their designated branch:
+   * Rupam Bairagya ➔ `member-rupam`
    * Anish Das ➔ `member-anish`
    * Mistu Naskar ➔ `member-mistu`
    * Subhankari Mondal ➔ `member-subhankari`
-   * Rupam ➔ `main` (Merge & Coordination)
+   * Lead Integration ➔ `main` (Merge & Tracking)
 2. **Commit Attributions:** All commits must carry the respective member's verified Git name and email matching their GitHub account.
 3. **Commit Quality:** Every commit must contain genuine code changes, documentation updates, or test cases. Empty or single-character commits are strictly disallowed.
 
