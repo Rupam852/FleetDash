@@ -1,0 +1,29 @@
+{
+  "name": "fleetdash-monorepo",
+  "version": "1.0.0",
+  "description": "High-Throughput Event-Driven Fleet Telemetry Dashboard - Infotact MERN Project",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:server": "npm run dev --workspace=@fleetdash/server",
+    "dev:client": "npm run dev --workspace=@fleetdash/client",
+    "dev": "npm run dev --workspaces",
+    "test": "npm run test --workspaces --if-present",
+    "simulate": "npm run simulate --workspace=@fleetdash/load-tests"
+  },
+  "keywords": [
+    "fleet-telemetry",
+    "worker-threads",
+    "bucket-pattern",
+    "canvas-api",
+    "turfjs",
+    "redis-pubsub",
+    "socketio-binary"
+  ],
+  "author": "FleetDash Engineering Team",
+  "license": "ISC"
+}
+
