@@ -12,22 +12,22 @@
   Member Name    Role &           GitHub Username       Email                         Mobile No    Dedicated Branch
                  Specialization                                                                    
   -------------- ---------------- --------------------- ----------------------------- ------------ ---------------------
-  **Rupam        **Team Lead,     `Rupam852`            `rupambairagya08@gmail.com`   +91          `member-rupam` *(Lead
-  Bairagya**     Frontend &                                                           9477098726   Integration)*
+  **Rupam        **Team Lead,     `Rupam852`            `rupambairagya08@gmail.com`   +91 9477098726   `member-rupam` *(Lead
+  Bairagya**     Frontend &                                                                             Integration)*
   *(Team Lead)*  Canvas Viewport                                                                   
                  Engineer**                                                                        
 
-  **Anish Das**  **Backend &      `Anish061106`         `dasanish157@gmail.com`       +91 95647    `member-anish`
-                 Geospatial Logic                                                     64694        
+  **Anish Das**  **Backend &      `Anish061106`         `dasanish157@gmail.com`       +91 95647 64694   `member-anish`
+                 Geospatial Logic                                                          
                  Engineer**                                                                        
 
-  **Subhankari   **Backend        `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 62977    `member-subhankari`
-  Mondal**       Infrastructure &                                                     54704        
+  **Subhankari   **Backend        `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 6297754704    `member-subhankari`
+  Mondal**       Infrastructure &                                                           
                  Ingestion                                                                         
                  Engineer**                                                                        
 
-  **Mistu        **Database &     `mamma30y`            `mammamroy75@gmail.com`       +91 62910    `member-mistu`
-  Naskar**       Storage                                                              34314        
+  **Mistu        **Database &     `mamma30y`            `mammamroy75@gmail.com`       +91 6291034314   `member-mistu`
+  Naskar**       Storage                                                                   
                  Engineer**                                                                        
   ----------------------------------------------------------------------------------------------------------------------
   
