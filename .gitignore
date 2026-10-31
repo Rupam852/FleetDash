@@ -22,6 +22,15 @@ build/
 .DS_Store
 Thumbs.db
 
+# Project PDFs & local backups
+*.pdf
+*_backup*
+.local_backup/
+FleetDash_code_backup/
+
+# Packages local staging (un-ignore during development sprints)
+# packages/
+
 # IDE files
 .vscode/*
 !.vscode/extensions.json
