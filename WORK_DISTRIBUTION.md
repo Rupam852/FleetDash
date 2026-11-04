@@ -12,21 +12,21 @@
   Member Name    Role &           GitHub Username       Email                         Mobile No    Dedicated Branch
                  Specialization                                                                    
   -------------- ---------------- --------------------- ----------------------------- ------------ ---------------------
-  **Rupam        **Team Lead,     `Rupam852`            `rupambairagya08@gmail.com`   +91 9477098726   `member-rupam` *(Lead
+  **Rupam        **Team Lead,     `Rupam852`            `rupambairagya08@gmail.com`   +91 9477098726   `rupam-bairagya` *(Lead
   Bairagya**     Frontend &                                                                             Integration)*
   *(Team Lead)*  Canvas Viewport                                                                   
                  Engineer**                                                                        
 
-  **Anish Das**  **Backend &      `Anish061106`         `dasanish157@gmail.com`       +91 95647 64694   `member-anish`
+  **Anish Das**  **Backend &      `Anish061106`         `dasanish157@gmail.com`       +91 95647 64694   `anish-das`
                  Geospatial Logic                                                          
                  Engineer**                                                                        
 
-  **Subhankari   **Backend        `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 6297754704    `member-subhankari`
+  **Subhankari   **Backend        `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 6297754704    `subhankari-mondal`
   Mondal**       Infrastructure &                                                           
                  Ingestion                                                                         
                  Engineer**                                                                        
 
-  **Mistu        **Database &     `mamma30y`            `mammamroy75@gmail.com`       +91 6291034314   `member-mistu`
+  **Mistu        **Database &     `mamma30y`            `mammamroy75@gmail.com`       +91 6291034314   `mistu-naskar`
   Naskar**       Storage                                                                   
                  Engineer**                                                                        
   ----------------------------------------------------------------------------------------------------------------------
@@ -184,10 +184,10 @@ As mandated by Infotact Solutions:
 1.  **Dedicated Branches:** Each member commits their own work to their
     designated branch:
 
-    -   Rupam Bairagya ➔ `member-rupam`
-    -   Anish Das ➔ `member-anish`
-    -   Mistu Naskar ➔ `member-mistu`
-    -   Subhankari Mondal ➔ `member-subhankari`
+    -   Rupam Bairagya ➔ `rupam-bairagya`
+    -   Anish Das ➔ `anish-das`
+    -   Mistu Naskar ➔ `mistu-naskar`
+    -   Subhankari Mondal ➔ `subhankari-mondal`
     -   Lead Integration ➔ `main` (review, merge, and progress tracking
         by Rupam)
 

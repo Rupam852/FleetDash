@@ -208,19 +208,19 @@ contracts.
   -----------------------------------------------------------------------
   Member                  Responsibility          GitHub Branch
   ----------------------- ----------------------- -----------------------
-  Rupam Bairagya          Team Lead, Frontend,    `member-rupam`
+  Rupam Bairagya          Team Lead, Frontend,    `rupam-bairagya`
                           Canvas viewport,        
                           integration             
 
-  Anish Das               Backend, geospatial     `member-anish`
+  Anish Das               Backend, geospatial     `anish-das`
                           logic, Redis messaging  
                           and alerts              
 
-  Mistu Naskar            Database schemas,       `member-mistu`
+  Mistu Naskar            Database schemas,       `mistu-naskar`
                           storage, indexes and    
                           telemetry history       
 
-  Subhankari Mondal       Backend infrastructure, `member-subhankari`
+  Subhankari Mondal       Backend infrastructure, `subhankari-mondal`
                           ingestion engine,       
                           worker threads, load    
                           testing and CI/CD       
@@ -230,10 +230,10 @@ contracts.
 
 Each team member should work on their dedicated branch:
 
--   `member-rupam`
--   `member-anish`
--   `member-mistu`
--   `member-subhankari`
+-   `rupam-bairagya`
+-   `anish-das`
+-   `mistu-naskar`
+-   `subhankari-mondal`
 
 Recommended workflow:
 
@@ -250,12 +250,12 @@ Recommended workflow:
 Example:
 
 ``` bash
-git switch member-rupam
+git switch rupam-bairagya
 git pull
 git status
 git add .
 git commit -m "Build fleet dashboard layout"
-git push -u origin member-rupam
+git push -u origin rupam-bairagya
 ```
 
 Use your own verified Git identity. Do not create commits under another
