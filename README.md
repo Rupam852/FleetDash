@@ -328,10 +328,7 @@ Planned quality checks include:
 
 ## Contribution
 
-Contributions are managed by the FleetDash internship team through
-assigned GitHub branches. Coordinate changes with the team before
-modifying shared interfaces, database schemas, or event payload
-contracts.
+Contributions are managed by the FleetDash internship team through assigned GitHub branches. Coordinate changes with the team before modifying shared interfaces, database schemas, or event payload contracts.
 
 ## Acknowledgements
 
