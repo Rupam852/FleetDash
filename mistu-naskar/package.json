@@ -1,0 +1,26 @@
+{
+  "name": "fleetdash-database-storage",
+  "version": "1.0.0",
+  "description": "FleetDash Time-Series Bucket Pattern and Storage Optimization (Mistu Naskar)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "benchmark": "tsx benchmarks/dbBenchmark.ts"
+  },
+  "keywords": ["fleetdash", "mongodb", "time-series", "bucket-pattern", "bulkWrite", "sub-5ms"],
+  "author": "Mistu Naskar <mammamroy75@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}
+
