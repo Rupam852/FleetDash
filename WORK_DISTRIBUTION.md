@@ -9,7 +9,7 @@
 ## 1. Team Hierarchy, Contact Details & Roles
 
   ----------------------------------------------------------------------------------------------------------------------
-  Member Name    Role &           GitHub Username       Email                         Mobile No    Dedicated Branch
+  Member Name    Role &           GitHub Username       Email                         Mobile No    Dedicated Branch & Directory
                  Specialization                                                                    
   -------------- ---------------- --------------------- ----------------------------- ------------ ---------------------
   **Rupam        **Team Lead,     `Rupam852`            `rupambairagya08@gmail.com`   +91 9477098726   `rupam-bairagya` *(Lead
@@ -17,13 +17,13 @@
   *(Team Lead)*  Canvas Viewport                                                                   
                  Engineer**                                                                        
 
-  **Anish Das**  **Backend &      `Anish061106`         `dasanish157@gmail.com`       +91 95647 64694   `anish-das`
-                 Geospatial Logic                                                          
+  **Anish Das**  **Backend        `Anish061106`         `dasanish157@gmail.com`       +91 95647 64694   `anish-das`
+                 Infrastructure &                                                                  
+                 Ingestion                                                                         
                  Engineer**                                                                        
 
-  **Subhankari   **Backend        `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 6297754704    `subhankari-mondal`
-  Mondal**       Infrastructure &                                                           
-                 Ingestion                                                                         
+  **Subhankari   **Backend &      `subhankarim303-wq`   `subhankarim303@gmail.com`    +91 6297754704    `subhankari-mondal`
+  Mondal**       Geospatial Logic                                                                  
                  Engineer**                                                                        
 
   **Mistu        **Database &     `mamma30y`            `mammamroy75@gmail.com`       +91 6291034314   `mistu-naskar`
@@ -36,13 +36,15 @@
 
 -   **Rupam** will lead the team and personally handle the React
     frontend, dashboard UI, Canvas viewport, frontend integration, and
-    overall project coordination.
--   **Subhankari** will take over the backend infrastructure and
-    ingestion-engine implementation tasks previously assigned to Rupam.
--   **Anish** remains responsible for Redis messaging, geospatial rules,
-    and alert logic.
+    overall project coordination (Directory: `rupam-bairagya`).
+-   **Anish** will take over the backend infrastructure, Express server,
+    Node.js `worker_threads` coordinate-parsing pool, k6 load testing, and
+    ingestion-engine implementation (Directory: `anish-das`).
+-   **Subhankari** will take over the Redis messaging, geospatial rules,
+    Turf.js boundary checks, geofencing, and alert logic (Directory:
+    `subhankari-mondal`).
 -   **Mistu** remains responsible for MongoDB schemas, storage
-    optimization, and telemetry history.
+    optimization, and telemetry history (Directory: `mistu-naskar`).
 
 ------------------------------------------------------------------------
 
@@ -56,7 +58,7 @@
         sidebar, and telemetry KPI metric cards.
     -   Define frontend component structure and coordinate API contracts
         with backend members.
--   **Subhankari Mondal (Backend Infrastructure):**
+-   **Anish Das (Backend Infrastructure):**
     -   Scaffold the project monorepo with strict TypeScript
         configuration (zero `any` policy).
     -   Build the Express.js server and initialize the Node.js
@@ -67,7 +69,7 @@
         Pattern**.
     -   Group high-frequency telemetry samples into hourly document
         arrays.
--   **Anish Das (Backend & Geospatial):**
+-   **Subhankari Mondal (Backend & Geospatial):**
     -   Model geospatial boundary zones (GeoJSON Polygons for Logistics
         Depots & Restricted Hubs).
     -   Configure environment secrets and message-broker configuration
@@ -84,19 +86,19 @@
         decode compact `ArrayBuffer` payloads.
     -   Display incoming vehicle telemetry in the frontend using a clear
         loading, empty, and error state.
--   **Subhankari Mondal (Backend Infrastructure):**
+-   **Anish Das (Backend Infrastructure):**
     -   Create and execute `k6` load-testing scripts targeting the
         planned **2,000 req/sec** throughput.
     -   Verify telemetry ingestion for missing or duplicated records and
         optimize worker concurrency.
-    -   Coordinate the ingestion endpoint contract with Anish and Mistu.
+    -   Coordinate the ingestion endpoint contract with Subhankari and Mistu.
 -   **Mistu Naskar (Database & Storage):**
     -   Implement compound indexes
         `{ vehicleId: 1, bucketStartTime: -1 }` on telemetry
         collections.
     -   Benchmark database queries and work toward the target of
         **sub-5ms** query response times.
--   **Anish Das (Backend & Geospatial):**
+-   **Subhankari Mondal (Backend & Geospatial):**
     -   Configure Redis Pub/Sub channels (`telemetry:stream`,
         `telemetry:alerts`) to decouple ingestion from client
         notifications.
@@ -122,7 +124,7 @@
     -   Implement vehicle rendering, selection, and basic viewport
         interaction; profile performance and work toward the **60 FPS**
         target.
--   **Subhankari Mondal (Backend Infrastructure):**
+-   **Anish Das (Backend Infrastructure):**
     -   Integrate the worker-based ingestion pipeline with the database
         and backend event flow.
     -   Implement the live system metrics API (`/api/v1/metrics`).
@@ -133,7 +135,7 @@
         for hourly buckets.
     -   Build the vehicle history retrieval API
         (`/api/v1/telemetry/history/:vehicleId`).
--   **Anish Das (Backend & Geospatial):**
+-   **Subhankari Mondal (Backend & Geospatial):**
     -   Implement backend boundary-intersection checks using **Turf.js**
         (`@turf/boolean-point-in-polygon`).
     -   Build state-transition logic to trigger alert payloads on
@@ -150,7 +152,7 @@
         vehicle-selection inspection cards.
     -   Coordinate final frontend/backend integration, end-to-end
         testing, and the Final Project Demo.
--   **Subhankari Mondal (Backend Infrastructure):**
+-   **Anish Das (Backend Infrastructure):**
     -   Set up the GitHub Actions CI workflow
         (`.github/workflows/ci.yml`) for automated checks.
     -   Conduct backend ingestion stress tests and fix worker or API
@@ -162,7 +164,7 @@
         subject to testing).
     -   Test database failure handling and complete schema documentation
         and benchmarking reports.
--   **Anish Das (Backend & Geospatial):**
+-   **Subhankari Mondal (Backend & Geospatial):**
     -   Implement speed-violation logic within geofences (over-speed
         alerts).
     -   Write unit and integration tests using Jest and Supertest for
