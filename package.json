@@ -1,0 +1,25 @@
+{
+  "name": "ledgerguard-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LedgerGuard: Dynamic Multi-Tenant Zero-Knowledge Billing Engine - Infotact Solutions Internship Project",
+  "scripts": {
+    "dev:gateway": "cd anish-das && npm run dev",
+    "dev:frontend": "cd rupam-bairagya && npm run dev",
+    "test:isolation": "cd mistu-naskar && npm test",
+    "test:idempotency": "cd subhankari-mondal && npm test",
+    "benchmark:locks": "cd subhankari-mondal && npm run benchmark:locks",
+    "benchmark:db": "cd mistu-naskar && npm run benchmark:db"
+  },
+  "keywords": [
+    "multi-tenant",
+    "zero-knowledge",
+    "billing-engine",
+    "mern",
+    "redis-lock",
+    "acid-transactions",
+    "infotact-solutions"
+  ],
+  "author": "Rupam Bairagya <rupambairagya08@gmail.com>",
+  "license": "MIT"
+}
