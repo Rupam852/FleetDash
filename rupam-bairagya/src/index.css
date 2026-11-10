@@ -2,17 +2,231 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: 'Inter', system-ui, sans-serif;
-  color-scheme: dark;
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html:not(.dark) {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: #0f172a;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .dark body {
+    background-color: #0B0F17;
+    color: #f8fafc;
+  }
+
+  /* Modern Web Guidance: Balanced headlines to prevent awkward line breaks */
+  h1, h2 {
+    text-wrap: balance;
+  }
+
+  /* Modern Web Guidance: Pretty text wrapping to eliminate orphaned single words */
+  p, li {
+    text-wrap: pretty;
+  }
+
+  /* Modern tabular numbers for financial ledger columns, IDs & amounts */
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
 }
 
-body {
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popInUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-pop {
+    animation: popIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-pop-up {
+    animation: popInUp 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.16s ease-out forwards;
+  }
+}
+
+/* Custom smooth scrollbar for dropdown menus (Light + Dark + Firefox) */
+.dropdown-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+.dropdown-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.dropdown-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dropdown-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dropdown-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark .dropdown-scrollbar {
+  scrollbar-color: #475569 transparent;
+}
+.dark .dropdown-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+.dark .dropdown-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  header, nav, aside, button, .no-print {
+    display: none !important;
+  }
+}
+
+/* Mobile Slide-Over Navigation Drawer (Top-Layer Popover + Native Scroll-Snap) */
+.MobileDrawer {
+  --drawer-width: min(18.5rem, 82dvw, 100dvw - 24px);
+  --drawer-backdrop: 0;
+  inset: 0;
   margin: 0;
-  min-height: 100vh;
-  background-color: #030712;
+  padding: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  background: transparent;
+  border: 0;
+  overflow: visible;
 }
 
-code, pre {
-  font-family: 'JetBrains Mono', monospace;
+@media (min-width: 1024px) {
+  .MobileDrawer {
+    display: none !important;
+  }
+}
+
+.MobileDrawer::backdrop {
+  background: #020617;
+  opacity: calc(var(--drawer-backdrop) * 0.6);
+}
+
+.MobileDrawer-scroller {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--drawer-width) 100%;
+  width: 100%;
+  height: 100svh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overscroll-behavior: none;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.MobileDrawer-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .MobileDrawer-scroller {
+    scroll-behavior: smooth;
+  }
+}
+
+.MobileDrawer-scroller::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100svh;
+  scroll-snap-align: end;
+  scroll-initial-target: nearest;
+}
+
+.MobileDrawer-sheet {
+  height: 100svh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-snap-align: start;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.MobileDrawer-sheet::-webkit-scrollbar {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .MobileDrawer {
+    timeline-scope: --drawer-fade;
+    animation: fade-drawer-backdrop linear both;
+    animation-timeline: --drawer-fade;
+  }
+
+  .MobileDrawer-scroller {
+    scroll-timeline: --drawer-fade x;
+  }
+
+  @property --drawer-backdrop {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+
+  @keyframes fade-drawer-backdrop {
+    0% {
+      --drawer-backdrop: 1;
+    }
+    100% {
+      --drawer-backdrop: 0;
+    }
+  }
 }

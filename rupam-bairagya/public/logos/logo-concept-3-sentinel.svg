@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="lg3_shield" x1="15" y1="15" x2="105" y2="105" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="60%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="lg3_stroke" x1="20" y1="10" x2="100" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="lg3_bar1" x1="42" y1="46" x2="42" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="lg3_bar2" x1="60" y1="36" x2="60" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="lg3_bar3" x1="78" y1="46" x2="78" y2="76" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sentinel Structural Shield (Clean Crisp Vector, Zero Outside Glow) -->
+  <g>
+    <!-- Outer Shield Crest -->
+    <path d="M60 14 
+             L98 28 
+             L98 62 
+             C98 84, 80 101, 60 108 
+             C40 101, 22 84, 22 62 
+             L22 28 Z" 
+          fill="url(#lg3_shield)" 
+          stroke="url(#lg3_stroke)" 
+          stroke-width="3" 
+          stroke-linejoin="round"/>
+
+    <!-- Inner Protective Geometric Inset Border -->
+    <path d="M60 22 
+             L90 33 
+             L90 60 
+             C90 77, 76 92, 60 98 
+             C44 92, 30 77, 30 60 
+             L30 33 Z" 
+          stroke="#38BDF8" 
+          stroke-width="1.2" 
+          stroke-dasharray="3 3" 
+          opacity="0.6"/>
+
+    <!-- 3 Floating Immutable Ledger Columns (Accounting Pillars) -->
+    <!-- Left Column -->
+    <rect x="39" y="50" width="8" height="24" rx="4" fill="url(#lg3_bar1)"/>
+    
+    <!-- Central Tower Column (Main Anchor) -->
+    <rect x="56" y="38" width="8" height="46" rx="4" fill="url(#lg3_bar2)"/>
+    <circle cx="60" cy="44" r="2.2" fill="#FFFFFF"/>
+
+    <!-- Right Column -->
+    <rect x="73" y="50" width="8" height="24" rx="4" fill="url(#lg3_bar3)"/>
+  </g>
+</svg>

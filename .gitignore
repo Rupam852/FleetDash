@@ -14,10 +14,8 @@ out/
 
 # Environment and secrets
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 *.pem
 *.key
 
@@ -33,9 +31,15 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# Internal team guide files (Never push to public GitHub)
+# Internal team guide, viva, scripts & zip packages (Never push to public GitHub)
 *GUIDE*.md
 *COMMANDS*.md
 *ROADMAP*.md
 *SCRIPT*.md
+*VIVA*.md
+*REVIEW*.md
+*SETUP*.md
+*MERGE*.md
+*QA*.md
 *.zip
+
