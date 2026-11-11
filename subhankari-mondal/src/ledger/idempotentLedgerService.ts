@@ -3,6 +3,46 @@ import { DistributedLockManager } from "../locks/distributedLock.js";
 import { AcidTransactionManager } from "./transactionManager.js";
 import { Connection, Model } from "mongoose";
 
+export interface ILedgerInvoice {
+  invoiceNumber: string;
+  tenantId: string;
+  organizationId: string;
+  customerId: string;
+  customerEmail: string;
+  currency: string;
+  items: Array<{ description: string; quantity: number; unitPriceCents: number; totalCents: number }>;
+  subtotalCents: number;
+  taxCents?: number;
+  totalCents: number;
+  status: "DRAFT" | "PENDING" | "PAID" | "VOID" | "ROLLED_BACK";
+  idempotencyKey: string;
+  paidAt?: Date;
+  dueAt: Date;
+}
+
+export interface ILedgerUsageQuota {
+  tenantId: string;
+  billingPeriod: string;
+  invoicesGenerated: number;
+  totalCostIncurredCents: number;
+  apiCallsCount: number;
+}
+
+export interface ILedgerAuditLog {
+  auditId?: string;
+  tenantId: string;
+  action: string;
+  entityId?: string;
+  details?: string;
+  timestamp?: Date;
+}
+
+interface CachedTransactionPayload {
+  invoiceNumber: string;
+  transactionId: string;
+  timestamp: string | Date;
+}
+
 export interface TransactionInput {
   tenantId: string;
   organizationId: string;
@@ -35,7 +75,11 @@ export class IdempotentLedgerService {
    */
   public static async processTransaction(
     connection: Connection,
-    models: { Invoice: Model<any>; UsageQuota: Model<any>; AuditLog: Model<any> },
+    models: {
+      Invoice: Model<ILedgerInvoice>;
+      UsageQuota: Model<ILedgerUsageQuota>;
+      AuditLog: Model<ILedgerAuditLog>;
+    },
     input: TransactionInput
   ): Promise<TransactionResult> {
     const idempotencyCacheKey = `idempotency:${input.tenantId}:${input.idempotencyKey}`;
@@ -43,7 +87,7 @@ export class IdempotentLedgerService {
     // Step 1: Idempotency fast-path check
     const cachedResponse = await redisClient.get(idempotencyCacheKey);
     if (cachedResponse) {
-      const parsed = JSON.parse(cachedResponse);
+      const parsed = JSON.parse(cachedResponse) as CachedTransactionPayload;
       return {
         status: "ALREADY_PROCESSED",
         idempotencyKey: input.idempotencyKey,
@@ -61,7 +105,7 @@ export class IdempotentLedgerService {
       // Re-check cache inside lock (Double-Checked Locking Pattern)
       const doubleCheck = await redisClient.get(idempotencyCacheKey);
       if (doubleCheck) {
-        const parsed = JSON.parse(doubleCheck);
+        const parsed = JSON.parse(doubleCheck) as CachedTransactionPayload;
         return {
           status: "ALREADY_PROCESSED",
           idempotencyKey: input.idempotencyKey,
