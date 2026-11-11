@@ -5,6 +5,7 @@ export interface TenantContext {
   tenantId: string;
   organizationId: string;
   userId?: string;
+  userEmail?: string;
   role?: string;
   requestId: string;
 }
