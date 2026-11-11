@@ -1,3 +1,7 @@
+import "dotenv/config";
+import dns from "node:dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
+
 import mongoose, { Connection, Model } from "mongoose";
 import { InvoiceSchema, IInvoice } from "../models/Invoice.model.js";
 import { UsageQuotaSchema, IUsageQuota } from "../models/UsageQuota.model.js";
