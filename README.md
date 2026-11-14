@@ -114,3 +114,4 @@ cd rupam-bairagya && npm run dev
 * **Week 2:** Idempotent Ledger & Multi-Document ACID Transactions (Redis distributed locks, transaction rollback visualizer, Mid-Project Review).
 * **Week 3:** Real-time Analytics Pipeline & Chart.js Visualizations (MongoDB aggregation pipelines for hourly resource billing).
 * **Week 4:** Cryptographic RSA-256 Zero-Knowledge Verification, Load Benchmarking, CI/CD, and Final Evaluation Defense.
+

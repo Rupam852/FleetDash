@@ -6,6 +6,8 @@
   "scripts": {
     "dev:gateway": "cd anish-das && npm run dev",
     "dev:frontend": "cd rupam-bairagya && npm run dev",
+    "test:gateway": "cd anish-das && npm test",
+    "test:frontend": "cd rupam-bairagya && npm test",
     "test:isolation": "cd mistu-naskar && npm test",
     "test:idempotency": "cd subhankari-mondal && npm test",
     "benchmark:locks": "cd subhankari-mondal && npm run benchmark:locks",
@@ -23,3 +25,4 @@
   "author": "Rupam Bairagya <rupambairagya08@gmail.com>",
   "license": "MIT"
 }
+
