@@ -1,12 +1,13 @@
 {
   "name": "ledgerguard-distributed-locks-module",
   "version": "1.0.0",
+  "type": "module",
   "description": "LedgerGuard Distributed Redis Locking & Multi-Document ACID Rollback Engine",
   "main": "dist/ledger/idempotentLedgerService.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "benchmark:locks": "tsx benchmarks/concurrencyStressTest.ts",
-    "test": "jest"
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
