@@ -1,12 +1,13 @@
 {
   "name": "ledgerguard-database-module",
   "version": "1.0.0",
+  "type": "module",
   "description": "LedgerGuard Dynamic Multi-Tenant MongoDB Connection Pool & Isolation Engine",
   "main": "dist/config/tenantDbManager.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "benchmark:db": "tsx benchmarks/dbIsolationBenchmark.ts",
-    "test": "jest"
+    "test": "npm run build && npm run benchmark:db"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
